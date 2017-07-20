@@ -1,4 +1,4 @@
-questions = [{
+const questions = [{
         // Q1
         question: 'Is JavaScript a case-sensitive language?',
         answers: [{
@@ -140,8 +140,7 @@ questions = [{
     },
     {
         // Q8
-        question: 'Which of the following function of String object causes a string to be displayed in the specified size as if it were in a <font size = '
-        size '> tag?',
+        question: `Which of the following function of String object causes a string to be displayed in the specified size as if it were in a <font size = 'size'> tag?`,
         answers: [{
                 text: 'fixed()',
                 correct: false
@@ -227,23 +226,19 @@ questions = [{
         // Q12
         question: 'Which of the following is the correct syntax to create a cookie using JavaScript?',
         answers: [{
-                text: 'document.cookie = '
-                key1 = value1;key2 = value2;expires = date ';',
+                text: `document.cookie = 'key1 = value1;key2 = value2;expires = date ';`,
                 correct: true
             },
             {
-                text: 'browser.cookie = '
-                key1 = value1;key2 = value2;expires = date ';',
+                text: `browser.cookie = 'key1 = value1;key2 = value2;expires = date ';`,
                 correct: false
             },
             {
-                text: 'window.cookie = '
-                key1 = value1;key2 = value2;expires = date ';',
+                text: `window.cookie = 'key1 = value1;key2 = value2;expires = date ';`,
                 correct: false
             },
             {
-                text: 'navigator.cookie = '
-                key1 = value1;key2 = value2;expires = date ';',
+                text: `navigator.cookie = 'key1 = value1;key2 = value2;expires = date ';`,
                 correct: false
             }
         ]

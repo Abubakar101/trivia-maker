@@ -3,15 +3,30 @@ const $el = {
   answers: document.querySelector(".answers")
 };
 
+// Getting random Q/S object from quiz.js and into tmp_question_obj
+let randQues = questions[Math.floor(Math.random() * questions.length)];
+
+
+
+
+
 let tmp_question_obj = {
-  question: "what is my name",
+  question: randQues.question,
   answers: [
-    { text: "computer", correct: false },
-    { text: "flie", correct: false },
-    { text: "abubakar", correct: true },
-    { text: "techsin", correct: false }
+    // { text: randQues[], correct: false },
+    // { text: "flie", correct: false },
+    // { text: "abubakar", correct: true },
+    // { text: "techsin", correct: false }
   ]
 };
+
+let ans = randQues.answers;
+console.log('answers: ', ans)
+for (let i = 0; i < ans.length; i++) {
+  tmp_question_obj.answers.push(ans[i]);
+}
+
+
 
 buildQuestion(tmp_question_obj);
 
