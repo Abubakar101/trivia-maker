@@ -3,7 +3,7 @@ Quiz Maker - Make an application which takes various questions from a file, pick
 
 How to contribute:
 1. Fork this repo to your github
-2. Clone to your local
+2. Clone to your local(Suggestion: ~/wdi/side-projects)
 3. Write code, add changes, suggestions :)
 4. git add, push, commit to your github
 5. Create pull request to submit changes
