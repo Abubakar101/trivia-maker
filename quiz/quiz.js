@@ -8,8 +8,13 @@ const questions = [{
             {
                 text: 'false',
                 correct: false
-            },
-        ]
+            }
+        ],
+        explanation: `Answer : True
+
+        Yes! JavaScript is a case-sensitive language. This means that language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.`
+ 
+
     },
 
     {
@@ -31,7 +36,10 @@ const questions = [{
                 text: 'None of the above.',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+
+        Using typeof operator, we can get the type of arguments passed to a function.`
     },
     {
         // Q3
@@ -52,7 +60,10 @@ const questions = [{
                 text: 'None of the above.',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+
+        push() method adds one or more elements to the end of an array and returns the new length of the array.`
     },
     {
         // Q4
@@ -73,7 +84,10 @@ const questions = [{
                 text: 'var book = new Book();',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : B
+        
+        var book = new Object(); creates an object.`
     },
     {
         // Q5
@@ -94,7 +108,10 @@ const questions = [{
                 text: 'append()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        concat() − Combines the text of two strings and returns a new string.`
     },
     {
         // Q6
@@ -115,7 +132,10 @@ const questions = [{
                 text: 'search()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        substr() − Returns the characters in a string beginning at the specified location through the specified number of characters.`
     },
     {
         // Q7
@@ -136,7 +156,10 @@ const questions = [{
                 text: 'substring()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : B
+        
+        toUpperCase() − Returns the calling string value converted to upper case.`
     },
     {
         // Q8
@@ -157,7 +180,10 @@ const questions = [{
                 text: 'bold()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        fontsize() − Causes a string to be displayed in the specified size as if it were in a <font size = 'size'> tag.`
     },
     {
         // Q9
@@ -178,7 +204,10 @@ const questions = [{
                 text: 'map()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        lastIndexOf() − Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.`
     },
     {
         // Q10
@@ -199,7 +228,10 @@ const questions = [{
                 text: 'reduceRight()',
                 correct: true
             }
-        ]
+        ],
+        explanation:`Answer : D
+        
+        reduceRight() − Applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value.`
     },
     {
         // Q11
@@ -220,7 +252,10 @@ const questions = [{
                 text: 'All of the above.',
                 correct: true
             }
-        ]
+        ],
+        explanation:`Answer : D
+        
+        All of the above options are correct.`
     },
     {
         // Q12
@@ -241,7 +276,10 @@ const questions = [{
                 text: `navigator.cookie = 'key1 = value1;key2 = value2;expires = date ';`,
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+        
+        document.cookie = 'key1 = value1; key2 = value2; expires = date'; is the correct option.`
     },
     {
         // Q13
@@ -262,7 +300,10 @@ const questions = [{
                 text: 'None of the above.',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+        
+        length() method returns the length of the string.`
     },
     {
         // Q14
@@ -283,7 +324,10 @@ const questions = [{
                 text: 'toLocaleString()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+        
+        toExponential(): Forces a number to display in exponential notation, even if the number is in the range in which JavaScript normally uses standard notation.`
     },
     {
         // Q15
@@ -304,7 +348,10 @@ const questions = [{
                 text: 'toPrecision()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+        
+        toString() − Returns a string value version of the current number.`
     },
     {
         // Q16
@@ -325,7 +372,10 @@ const questions = [{
                 text: 'search()',
                 correct: true
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        replace() − Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.`
     },
     {
         // Q17
@@ -346,7 +396,10 @@ const questions = [{
                 text: 'big()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : A
+        
+        anchor() − Creates an HTML anchor that is used as a hypertext target.`
     },
     {
         // Q18
@@ -367,7 +420,10 @@ const questions = [{
                 text: 'sub()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : B
+        
+        small() − Causes a string to be displayed in a small font, as if it were in a <small> tag.`
     },
     {
         // Q19
@@ -388,7 +444,10 @@ const questions = [{
                 text: 'reduceRight()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : C
+        
+        reduce() − Applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.`
     },
     {
         question: 'Which of the following function of Array object removes the first element from an array and returns that element?',
@@ -408,6 +467,9 @@ const questions = [{
                 text: 'some()',
                 correct: false
             }
-        ]
+        ],
+        explanation:`Answer : B
+        
+        shift() − Removes the first element from an array and returns that element.`
     }
 ];

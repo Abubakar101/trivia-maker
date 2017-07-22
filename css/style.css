@@ -2,7 +2,6 @@ body {
   background: #EEE;
   display: flex;
   justify-content: center;
-
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -18,6 +17,7 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
 .container {
   position: relative;
   max-width: 600px;
@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .answer {
   padding: 8px 10px;
   border-radius: 4px;
@@ -44,8 +45,26 @@ body {
   cursor: pointer;
 }
 
-.answer:hover, .answer:active, .answer.active {
+.answer:hover {
   background-color: #6050f3;
   color: #fff;
   border-color: #6050f3;
+}
+
+.answer.active {
+  background-color: greenyellow;
+  color: #fff;
+}
+
+.answer.answerFalse {
+  background-color: red;
+  color: #fff;
+}
+
+.expDiv {
+  padding: 18px 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 1px solid #aaa;
+  font-size: larger;
 }
