@@ -68,7 +68,8 @@ function buildQuestion(data) {
 
         });
 
-        //add active class to self
+        //add 'active' class to self when answer is right
+        //remove 'active' class and add new class with 'RED color' and new div with explanation when the answer is wrong.
         if (answer.correct === true) {
           e.target.classList.add("active");
           e.target.classList.remove("expDiv");
