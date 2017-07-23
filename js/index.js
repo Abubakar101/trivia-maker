@@ -1,25 +1,30 @@
 let randomNumber;
 let questionNumber = 0;
+let tmp_question = [];
 const $el = {
   question: document.querySelector("#question"),
   answers: document.querySelector(".answers"),
   explain: document.querySelector(".explain"),
   buttonNext: document.querySelector("#nextbtn"),
-  buttonBack: document.querySelector("#backbtn")
+  buttonBack: document.querySelector("#backbtn"),
+  questionNum: document.querySelector(".questionNum")
 };
 
-/*
-  @buttons when reach end value start from the start or end
+
+
+/* Things to do!
+  @Show Current Question Number
+  @ Randomize also the answer choices
   @count score of average 
-*/
+*/// *Personal NOTE = Random number + for loop = problem!
 
 
-let tmp_question = [];
 
 
-// *Personal NOTE = Random number + for loop = problem!
 
-// Shuffling and using for loop to push random random Q/S/E object from quiz.js and into tmp_question
+
+
+// Shuffling and using for loop to push random  (Question/answer/Explanation) object from quiz.js and into tmp_question[]
 let questionsLength = questions.length
 for (var i = 0; i < questionsLength; i++) {
   randomNumber = Math.floor(questions.length * Math.random());
@@ -27,23 +32,21 @@ for (var i = 0; i < questionsLength; i++) {
   questions.splice(randomNumber, 1);
 
 }
-
+///////////////////////////////////////////////////////////////////////////////////
 //@Buttons 
-//Button NEXT
+//Button NEXT for NEXT question
 $el.buttonNext.addEventListener('click', function (e) {
-
   questionNumber++;
   buildQuestion(tmp_question[questionNumber])
 })
 
-//Button BACK
+//Button BACK to go back to previous question
 $el.buttonBack.addEventListener('click', function (e) {
-
   questionNumber--;
   buildQuestion(tmp_question[questionNumber])
 })
 
-
+///////////////////////////////////////////////////////////////////////////////////
 buildQuestion(tmp_question[0]);
 
 function buildQuestion(data) {
@@ -52,6 +55,26 @@ function buildQuestion(data) {
   $el.answers.innerHTML = "";
   $el.explain.innerHTML = "";
 
+///////////////////////////////////////////////////////////////////////////////////
+  //Remove Back Button at first Question
+  if (questionNumber === 0) {
+    $el.buttonBack.style.display = 'none';
+  } else {
+    $el.buttonBack.style.display = 'block';
+  }
+  //Remove Next Button at last Question
+  if (questionNumber === tmp_question.length - 1) {
+    $el.buttonNext.style.display = 'none';
+  } else {
+    $el.buttonNext.style.display = 'block';
+  }
+///////////////////////////////////////////////////////////////////////////////////
+
+  //Current Question Number and Questions total quantity (on TOP right Corner)
+  $el.questionNum.innerHTML = (questionNumber + 1) + " - " + tmp_question.length;
+
+
+///////////////////////////////////////////////////////////////////////////////////
 
   // creating new div for each choice
   $el.question.innerHTML = question;
