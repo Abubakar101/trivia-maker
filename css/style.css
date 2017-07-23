@@ -68,3 +68,39 @@ body {
   border: 1px solid #aaa;
   font-size: larger;
 }
+
+button {
+  margin-top: 13.5px;
+  margin-bottom: -19px;
+  height: 55px;
+  font-weight: 600;
+  border: none;
+  background: #ededed;
+  letter-spacing: 2px;
+  padding: 10px;
+  transition: all .2s;
+}
+
+button:hover {
+  background-color: #6050f3;
+  color: #fff;
+  border-color: #6050f3;
+  cursor: pointer;
+}
+
+button:active {
+  border: 1px solid rgba(255, 255, 255, .75);
+  outline: none;
+}
+
+#nextbtn {
+  float: right;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#backbtn {
+  float: left;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}

@@ -1,50 +1,57 @@
-let exp = true;
-
+let randomNumber;
+let questionNumber = 0;
 const $el = {
   question: document.querySelector("#question"),
   answers: document.querySelector(".answers"),
-  explain: document.querySelector(".explain")
+  explain: document.querySelector(".explain"),
+  buttonNext: document.querySelector("#nextbtn"),
+  buttonBack: document.querySelector("#backbtn")
 };
 
-// Getting random Q/S object from quiz.js and into tmp_question_obj
-let randQues = questions[Math.floor(Math.random() * questions.length)];
-
-//questions[Math.floor(Math.random() * questions.length)];
-
-// questions[0];
+/*
+  @buttons when reach end value start from the start or end
+  @count score of average 
+*/
 
 
-// creating an similar object as in quiz.js file and then after randomizing it, 
-// the answers gets pushed into emtpy object-array to create a new Div for each answer.
-let tmp_question_obj = {
-  question: randQues.question,
-  answers: [
-    // { text: randQues[], correct: false },
-    // { text: "flie", correct: false },
-    // { text: "abubakar", correct: true },
-    // { text: "techsin", correct: false }
-  ],
-  explanation: randQues.explanation
-};
+let tmp_question = [];
 
 
-// when click on the right answer = change color to green
-// Or red when click on wrong answer
-// either way, show new div with explanation
+// *Personal NOTE = Random number + for loop = problem!
+
+// Shuffling and using for loop to push random random Q/S/E object from quiz.js and into tmp_question
+let questionsLength = questions.length
+for (var i = 0; i < questionsLength; i++) {
+  randomNumber = Math.floor(questions.length * Math.random());
+  tmp_question.push(questions[randomNumber]);
+  questions.splice(randomNumber, 1);
+
+}
+
+//@Buttons 
+//Button NEXT
+$el.buttonNext.addEventListener('click', function (e) {
+
+  questionNumber++;
+  buildQuestion(tmp_question[questionNumber])
+})
+
+//Button BACK
+$el.buttonBack.addEventListener('click', function (e) {
+
+  questionNumber--;
+  buildQuestion(tmp_question[questionNumber])
+})
 
 
-
-buildQuestion(tmp_question_obj);
+buildQuestion(tmp_question[0]);
 
 function buildQuestion(data) {
   let question = data.question;
   let answers = data.answers;
+  $el.answers.innerHTML = "";
+  $el.explain.innerHTML = "";
 
-  //TODO shuffle answers
-  let ans = randQues.answers;
-  for (let i = 0; i < ans.length; i++) {
-    tmp_question_obj.answers.push(ans[i]);
-  }
 
   // creating new div for each choice
   $el.question.innerHTML = question;
@@ -52,8 +59,6 @@ function buildQuestion(data) {
     let div = document.createElement("div");
     div.className = "answer";
     div.innerText = answer.text;
-
-
 
     //add click event to answer
     div.addEventListener(
@@ -76,15 +81,13 @@ function buildQuestion(data) {
         } else {
           e.target.classList.add("answerFalse");
 
-          // add explanation when the answer is wrong!
-          if (exp === true) {
+          // add explanation div when the answer is wrong!
+          if ($el.explain.innerHTML === "") {
             let expDiv = document.createElement("div");
             expDiv.className = "expDiv";
             expDiv.innerText = data.explanation;
             $el.explain.appendChild(expDiv);
-            exp = false;
           }
-
         }
 
       },
@@ -93,5 +96,6 @@ function buildQuestion(data) {
 
     //append answer to answers
     $el.answers.appendChild(div);
+
   });
 }
