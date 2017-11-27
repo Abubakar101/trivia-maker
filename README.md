@@ -10,21 +10,3 @@ How to contribute:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-*  Link to Pseudocoding  https://tinyurl.com/ycw9a89f
-*  Link to Git https://git.generalassemb.ly/xyanz/quiz-maker (where we will upload everything!)
-*  Link to Quiz Project (Q/S) https://tinyurl.com/y8ghmgsk 
-
-* As we finsih the "Pseudocoding" process, we will move the content into readme.md to here!
